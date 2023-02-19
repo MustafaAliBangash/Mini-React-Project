@@ -1,5 +1,36 @@
+body {
+ background-color: lightgrey;
+}
+
+
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  /* box-shadow: 0 9px #999; */
+}
+.button:active {
+  transform: translateY(4px);
+
+}
+
 .App {
   text-align: center;
+  width: 50%;
+  border: 15px solid blue;
+  background-color: lightblue;
+  padding: 10px;
+  margin-left: 20%;
+  margin-top: 2%;
 }
 
 .App-logo {
@@ -14,13 +45,17 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: royalblue;
+  padding: auto; 
+  min-width: none;
+  margin-left: 30%;
+  margin-right: 30%;
+  
+  /* display: flex; */
+  flex-direction: column;                 
+  /* align-items: top; */
+  text-align: center, auto;
+  font-size: calc(10px + 2vmin), auto;
   color: white;
 }
 
@@ -35,4 +70,66 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+input[type=text] {
+  width: 40%;
+  padding: 10px 20px , auto;
+  margin: 8px 0;
+  margin-left: 0%;
+  box-sizing: border-box;
+}
+
+.fname {
+  text-align: center, auto;
+
+  margin-right: 34%; 
+  margin-top: 0.5% ;
+  font-weight: bold , auto;
+ 
+  font-size: calc(10px + 2vmin), auto;
+}
+.pass{
+  text-align: center, auto;
+  margin-right: 34%; 
+  margin-left: 5%;
+  margin-top: 0.5% ;
+  font-weight: bold , auto;
+ 
+  font-size: calc(10px + 2vmin), auto;  
+}
+
+.button {
+  position: relative;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 5px;
+  width: 200px ;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
 }
